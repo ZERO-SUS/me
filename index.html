@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZERO SUS - Graphic Designer & Programmer</title>
+  <meta name="description" content="ZERO SUS - graphic designer & programmer building bold, clean interfaces." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=JetBrains+Mono:wght@400&family=DM+Mono:wght@400;500&family=Rubik:wght@900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="locked">
+  <div id="loader" aria-hidden="true">
+    <div class="ldr-name" id="ldrName"></div>
+    <span class="ldr-tag">Loading portfolio</span>
+    <span class="ldr-count" id="ldrCount">0</span>
+  </div>
+
+  <div id="prog"></div>
+  <div id="cursor" aria-hidden="true"></div>
+
+  <header id="hdr">
+    <a href="#top" class="hdr-logo" aria-label="Home"><img src="assets/logo.png" alt="" /><span>ZERO SUS*</span></a>
+    <nav class="hdr-links">
+      <a href="#top">Home</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/ZERO-SUS" target="_blank" rel="noopener">GitHub &nearr;</a>
+    </nav>
+  </header>
+
+  <button id="nav-fab" aria-expanded="false" aria-controls="menu"><span class="chev">&gt;</span><span id="fabLbl">Navigate</span><i class="blk"></i><kbd>/</kbd></button>
+  <div id="menu" hidden>
+    <a href="#top">Home</a>
+    <a href="#about">About</a>
+    <a href="#receipts">Receipts</a>
+    <a href="#work">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main id="top">
+    <section class="hero" data-theme="light">
+      <div class="topbar"><div><span>Full-Stack Developer</span><span>Web Designer &mdash; Bangalore</span></div><div class="tb-r"><span>Based in Bangalore, IN</span><span class="otw">Open to work</span></div></div>
+      <p class="pill rv" style="--d:.1s"><span class="dot"></span> Where design meets code</p>
+      <h1 class="mega rv" style="--d:.25s">ZERO SUS</h1>
+      <p class="role rv" style="--d:.45s">Full-Stack Developer</p>
+      <p class="hero-sub rv" style="--d:.6s">Graphic designer &amp; programmer - building clean, futuristic interfaces</p>
+      <div class="hero-actions rv" style="--d:.75s">
+        <a href="#work" class="cbtn cbtn--fill"><i class="bdot"></i> See the work</a>
+        <a href="mailto:suszero9@gmail.com" class="cbtn">Say hi &rarr;</a>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+
+    <!-- 02 ABOUT -->
+    <section id="about" class="sec sec--ink" data-theme="dark">
+      <div class="wrap about-grid">
+        <div>
+          <p class="kicker"><i></i>02 - About</p>
+          <h2 class="title">Nice to<br />meet <span class="accent">you.</span></h2>
+          <p class="body">I'm ZERO SUS - a graphic designer and programmer who would rather ship real things than collect tutorials.</p>
+          <p class="body">These days that means clean, futuristic interfaces, design work, and small tools that do something useful.</p>
+          <dl class="facts">
+            <div><dt>Based</dt><dd>Bangalore, India</dd></div>
+            <div><dt>Last push</dt><dd id="fPush">Loading...</dd></div>
+            <div><dt>GitHub</dt><dd id="fFollow">Loading...</dd></div>
+            <div><dt>Status</dt><dd>Open to work</dd></div>
+            <div><dt>Currently</dt><dd>Building clean interfaces</dd></div>
+            <div><dt>Off duty</dt><dd>Breaking Bad &middot; Red Bull &middot; Debugging 4 fun</dd></div>
+          </dl>
+          <p class="tiny">Real terminal - type 'help'</p>
+        </div>
+        <div class="term" id="term">
+          <div class="term-bar"><span class="d"></span><span class="d"></span><span class="d on"></span><b>zero-sus@portfolio - zsh</b></div>
+          <div class="term-body" id="termBody"></div>
+          <form class="term-in" id="termForm" autocomplete="off">
+            <span>&gt;</span>
+            <input id="termInput" type="text" placeholder="type a command - try 'help'" spellcheck="false" aria-label="Terminal command" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 RECEIPTS -->
+    <section id="receipts" class="sec sec--light" data-theme="light">
+      <div class="wrap">
+        <p class="kicker"><i></i>03 - Proof</p>
+        <h2 class="title">The receipts.</h2>
+        <div class="statrow">
+          <div><strong id="rcContrib">0</strong><span>Contributions - past year</span></div>
+          <div><strong id="rcRepos">0</strong><span>Public repos</span></div>
+          <div><strong id="rcDays">0</strong><span>Active days</span></div>
+          <div><strong id="rcBest">0</strong><span>Best day - commits</span></div>
+        </div>
+        <div class="rc-grid">
+          <div class="panel panel--shadow">
+            <div class="panel-h"><span>Contribution graph - @ZERO-SUS</span><span class="live"><i></i> <span id="liveTxt">Loading</span></span></div>
+            <div class="graph-wrap"><div class="graph" id="graph"></div></div>
+            <div class="panel-f"><span id="graphRange">Past year</span>
+              <span class="legend">Less <i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i> More</span></div>
+          </div>
+          <div class="panel panel--shadow">
+            <div class="panel-h"><span>Languages - by repo</span></div>
+            <div class="langs" id="langs"></div>
+          </div>
+        </div>
+        <div class="rc-actions">
+          <a class="cbtn cbtn--solid" href="https://github.com/ZERO-SUS" target="_blank" rel="noopener">Full profile on GitHub</a>
+          <span class="cbtn" id="since">Shipping since 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 PROJECTS -->
+    <section id="work" class="sec sec--ink" data-theme="dark">
+      <div class="wrap">
+        <p class="kicker"><i></i>04 - Work</p>
+        <h2 class="title">Projects.</h2>
+        <div class="projects" id="projects"></div>
+      </div>
+    </section>
+
+    <!-- 05 SKILLS -->
+    <section id="skills" class="sec sec--light" data-theme="light">
+      <div class="wrap">
+        <p class="kicker"><i></i>05 - Stack</p>
+        <h2 class="title">The<br />arsenal.</h2>
+        <div id="skillGroups"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="foot" data-theme="dark">
+    <p class="foot-time" id="footTime"></p>
+    <div class="foot-mega">ZERO SUS</div>
+    <p class="pill pill--dark"><span class="dot"></span> Available for work</p>
+    <p class="foot-role">Full-Stack Developer</p>
+    <a class="cbtn cbtn--onink" href="mailto:suszero9@gmail.com">Contact &rarr;</a>
+    <div class="socials">
+      <a href="https://discord.gg/YxBX82Tdgp" target="_blank" rel="noopener" aria-label="Discord" title="Discord"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.74 19.74 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.292a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .079.009c.12.1.246.198.373.293a.077.077 0 0 1-.006.127 12.3 12.3 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.06.06 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg></a>
+      <a href="mailto:suszero9@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      <a href="https://github.com/ZERO-SUS" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a>
+      <a href="https://guns.lol/zero_sus" target="_blank" rel="noopener" aria-label="guns.lol" title="guns.lol"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></a>
+      <a href="https://open.spotify.com/user/31g4witavbhronq4vkv3xzcp4rfa" target="_blank" rel="noopener" aria-label="Spotify" title="Spotify"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M7 9.5c3.5-1 7-.7 10 1M7.5 12.8c3-.8 6-.5 8.6 1M8 15.8c2.4-.6 4.7-.4 6.6.7"/></svg></a>
+      <a href="https://www.youtube.com/@ZEROSUS-s7i" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a>
+    </div>
+    <div class="foot-row">
+      <span>Design by ZERO SUS</span>
+      <span>All rights reserved ZERO SUS <span id="year"></span></span>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
